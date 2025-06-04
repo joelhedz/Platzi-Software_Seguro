@@ -67,5 +67,6 @@ func TestInsert(t *testing.T) {
 	err = insertGitHubWebhook(ctx, mockCommit, webhook, string(body), cretedTime)
 	c.NoError(err)
 
+	// Verify that the mock expectations were met
 	m.AssertExpectations(t)
 }
